@@ -1,8 +1,8 @@
 # Column names and column indices to read
-columns = {'data':0, 'time':1, 'tempout':2}
+columns = {'data':0, 'time':1, 'tempout':2, 'windspeed':7}
 
 #data types for each column only if non-string
-types = {'tempout':float}
+types = {'tempout':float, 'windspeed':float}
 
 #intitialize data variable:
 data = {} 
@@ -16,7 +16,7 @@ with open(filename, 'r') as datafile:
 
     #read the header:
     for _ in range(3): 
-        datafile.readline()
+        headerline = datafile.readline()
 
     #read and parse the rest of the file:
     for line in datafile:
