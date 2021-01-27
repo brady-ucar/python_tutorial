@@ -11,7 +11,7 @@ types = {'tempout':float, 'windspeed':float, 'windchill':float}
 # Read data from file
 data = read_data(columns, types=types)
 
-# Compute wind chill temperature:
+# Compute wind chill factor:
 windchill = []
 for temp, windspeed in zip(data['tempout'], data['windspeed']):
     windchill.append(compute_windchill(temp, windspeed))
