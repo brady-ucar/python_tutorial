@@ -48,8 +48,8 @@ def compute_heatindex(t, hum):
 
 # running the function to compute wind chill index
 heatindex = []
-for temp, hum in zip(data['tempout'], data['humout']):
-    heatindex.append(compute_heatindex(temp, hum))
+for temp, humout in zip(data['tempout'], data['humout']):
+    heatindex.append(compute_heatindex(temp, humout))
 
 # Output comparison of data
 print('               Original  Computed')
