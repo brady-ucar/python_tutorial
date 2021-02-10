@@ -10,9 +10,9 @@ def print_comparison(name, dates, times, original_data, computed_data):
 
     #Output comparison of data
 
-    print('               Original  Computed')
-    print(' DATE    TIME  {name.upper():>9} {name.upper():>9} DIFFERENCE')
-    print('------- ------ --------- --------- ----------')
+    print(f'               Original  Computed')
+    print(f' DATE    TIME  {name.upper():>9} {name.upper():>9} DIFFERENCE')
+    print(f'------- ------ --------- --------- ----------')
     zip_data = zip(dates, times, original_data, computed_data)
     for date, time, orig, comp in zip_data:
         diff = orig - comp
